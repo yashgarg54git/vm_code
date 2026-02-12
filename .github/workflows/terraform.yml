@@ -1,4 +1,4 @@
-name: vm_terraform_code
+name: vm_tf_code
 
 on: 
   push:
