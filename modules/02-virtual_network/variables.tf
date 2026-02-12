@@ -1,11 +1,3 @@
-variable "rgs" {
-    type = map(object({
-      resource_group_name = string
-      location = string
-    }))
-  
-}
-
 variable "vnets" {
     type = map(object({
 
@@ -17,4 +9,3 @@ variable "vnets" {
     }))
   
 }
-
