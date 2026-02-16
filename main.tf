@@ -32,7 +32,7 @@ module "nicm" {
 }
 
 module "nsgm" {
-  source = "./modules/07-nsg"
+  source = "./modules/07-NSG"
   nsgs   = var.nsgs
 }
 
