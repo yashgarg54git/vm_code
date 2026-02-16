@@ -15,3 +15,9 @@ module "snetm" {
     subnets = var.subnets
   
 }
+
+module "pipm" {
+    source = "./modules/04-public_ip"
+    public_ips = var.public_ips
+  
+}
