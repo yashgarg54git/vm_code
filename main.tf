@@ -9,3 +9,9 @@ module "vnetm" {
     vnets = var.vnets
   
 }
+
+module "snetm" {
+    source = "./modules/03-subnet"
+    subnets = var.subnets
+  
+}
