@@ -4,5 +4,6 @@ variable "public_ips" {
     location            = string
     resource_group_name = string
     allocation_method   = string
+    sku                 = string
   }))
 }
