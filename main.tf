@@ -21,3 +21,11 @@ module "pipm" {
     public_ips = var.public_ips
   
 }
+
+module "nicm" {
+    source = "./modules/05_NIC"
+    nics = var.nics
+    subnet_ids    = module.snetm.subnet_ids
+    public_ip_ids = module.pipm.public_ip_ids
+  
+}
