@@ -29,3 +29,9 @@ module "nicm" {
     public_ip_ids = module.pipm.public_ip_ids
   
 }
+
+module "vmm" {
+  source  = "./modules/06-virtual_machine"
+  vms     = var.vms
+  nic_ids = module.nicm.nic_ids
+}
