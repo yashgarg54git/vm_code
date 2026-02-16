@@ -27,8 +27,15 @@ module "nicm" {
     nics = var.nics
     subnet_ids    = module.snetm.subnet_ids
     public_ip_ids = module.pipm.public_ip_ids
+    nsg_ids       = module.nsgm.nsg_ids
   
 }
+
+module "nsgm" {
+  source = "./modules/07-nsg"
+  nsgs   = var.nsgs
+}
+
 
 module "vmm" {
   source  = "./modules/06-virtual_machine"

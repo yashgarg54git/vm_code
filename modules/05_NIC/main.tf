@@ -12,3 +12,11 @@ resource "azurerm_network_interface" "nic" {
     public_ip_address_id          = var.public_ip_ids[each.value.public_ip_key]
   }
 }
+# nsg association
+resource "azurerm_network_interface_security_group_association" "assoc" {
+  for_each = var.nics
+
+  network_interface_id      = azurerm_network_interface.nic[each.key].id
+  network_security_group_id = var.nsg_ids[each.value.nsg_key]
+}
+
