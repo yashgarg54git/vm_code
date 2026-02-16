@@ -3,7 +3,7 @@ name: vm_tf_code
 on: 
   push:
     branches:
-      - main
+      - master
   workflow_dispatch: 
 
 jobs:
